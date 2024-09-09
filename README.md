@@ -1,2 +1,2 @@
-# zed-oxc
-Zed extension for oxc 
+# zed-oxlint
+Oxlint extension for zed 
