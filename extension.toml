@@ -4,4 +4,4 @@ description = "Oxlint extension for Zed"
 version = "0.0.1"
 schema_version = 1
 authors = ["Rakesh Chatrath <rakesh@rakeshchatrath.me>"]
-repository = "https://github.com/rchatrath7/zed-oxc"
+repository = "https://github.com/rchatrath7/zed-oxlint"
