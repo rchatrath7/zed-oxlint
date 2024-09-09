@@ -5,3 +5,16 @@ version = "0.0.1"
 schema_version = 1
 authors = ["Rakesh Chatrath <rakesh@rakeshchatrath.me>"]
 repository = "https://github.com/rchatrath7/zed-oxlint"
+
+[language_servers.oxlint]
+code_actions_kind = ["", "quickfix"]
+language          = "JavaScript"
+languages         = ["JavaScript", "JSX", "TypeScript", "TSX", "JSON"]
+name              = "Oxlint Language Server"
+
+[language_servers.oxlint.language_ids]
+"JSON"       = "json"
+"JSX"        = "javascriptreact"
+"JavaScript" = "javascript"
+"TSX"        = "typescriptreact"
+"TypeScript" = "typescript"
