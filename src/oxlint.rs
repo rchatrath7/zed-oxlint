@@ -5,7 +5,7 @@ use std::{
 use zed::settings::LspSettings;
 use zed_extension_api::{self as zed, LanguageServerId, Result};
 
-const SERVER_PATH: &str = "node_modules/oxlint/bin/oxc_language_server";
+const SERVER_PATH: &str = "node_modules/.bin/oxc_language_server";
 
 struct OxlintExtension;
 
