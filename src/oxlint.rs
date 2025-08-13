@@ -46,7 +46,7 @@ impl OxlintExtension {
             linux_build = match platform {
                 zed::Os::Linux => "-gnu",
                 _ => "",
-            }
+            },
         );
         let fallback = &Path::new("./node_modules").join(format!("{bin_name}/oxc_language_server"));
         let version = zed::npm_package_latest_version(&bin_name)?;
