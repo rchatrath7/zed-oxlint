@@ -32,7 +32,7 @@ impl OxlintExtension {
 
         let (platform, arch) = zed::current_platform();
         let bin_name = format!(
-            "@oxlint/{platform}-{arch}",
+            "@oxlint/{platform}-{arch}{linux_build}",
             platform = match platform {
                 zed::Os::Mac => "darwin",
                 zed::Os::Linux => "linux",
@@ -42,6 +42,10 @@ impl OxlintExtension {
                 zed::Architecture::Aarch64 => "arm64",
                 zed::Architecture::X8664 => "x64",
                 _ => return Err(format!("unsupported architecture: {arch:?}")),
+            },
+            linux_build = match platform {
+                zed::Os::Linux => "-gnu",
+                _ => "",
             },
         );
         let fallback = &Path::new("./node_modules").join(format!("{bin_name}/oxc_language_server"));
